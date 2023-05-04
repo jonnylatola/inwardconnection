@@ -34,4 +34,40 @@ var bizberg_object = {"admin_bar_status":"","slider_loop":"1","slider_speed":"3"
 		h.parentNode.insertBefore(j, h);
 	})(window, document, 'script', 'https://chat.latechops.co.za/livechat');
 	</script>
+	<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?47263';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#c24795",
+      "ctaText":"WhatsApp Us",
+      "borderRadius":"15",
+      "marginLeft":"0",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"left"
+  },
+  "brandSetting":{
+      "brandName":"WATI",
+      "brandSubTitle":"Typically replies within a day",
+      "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"2788610482"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
 </body>  </html>
