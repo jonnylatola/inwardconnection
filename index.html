@@ -11,6 +11,9 @@
 //      var txt = document.getElementById("message");
 
         function sendEmail() { 
+		var email = document.getElementById("email").value;
+		var message = document.getElementById("message").value;
+	if (email && message)
           Email.send({ 
             Host: "smtp.elasticemail.com", 
             Username: "jonathan@latechops.co.za", 
@@ -18,11 +21,14 @@
             To: "jonnylatola@gmail.com", 
             From: "jonathan@latechops.co.za", 
             Subject: "New Inquiry from InwardConnection", 
-            Body: "Email: " + document.getElementById("email").value + "<br/>" + document.getElementById("message").value,
+            Body: "Email: " + email + "<br/>" + message,
           }) 
             .then(function (message) { 
               swal("Thank you!", "Mail successfully sent.", "success") 
             }); 
+	else {
+		swal("Oops!", "Please fill blanks fields", "warning");
+	}
         } 
       </script> 
 
