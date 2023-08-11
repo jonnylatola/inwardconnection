@@ -3,6 +3,7 @@
 //require "sendmail.php";
 ?-->
 <!doctype html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
       <script type="text/javascript"> 
@@ -20,7 +21,7 @@
             Body: "Email: " + document.getElementById("email").value + "<br/>" + document.getElementById("message").value,
           }) 
             .then(function (message) { 
-              alert("mail sent successfully") 
+              swal("Mail Sent. Thank you!") 
             }); 
         } 
       </script> 
