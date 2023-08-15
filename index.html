@@ -36,9 +36,8 @@
 	function scrollToForm() {
 		const myForm = document.getElementById("contact-form");
 		myForm.scrollIntoView({behavior: 'smooth'});
-
-		message = document.getElementById("package1").value;		
-		
+		cusMsg1 = document.getElementById("package1").value;		
+		myForm.elements['cusMsg1'].value = cusMsg1;
 	}
 </script>
 
