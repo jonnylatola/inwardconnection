@@ -33,42 +33,15 @@
       </script> 
 
 <script type="text/javascript">
-    function scrollToForm() {
-    	const myForm = document.getElementById("contact-form");
-    	const targetOffset = myForm.getBoundingClientRect().top;
-    	const duration = 1000; // Adjust this value to control the duration of the scroll
 
-	const startTime = performance.now();
-
-	cusMsg1 = "Hi, I have some questions around your ADHOC Package offering. Please do call me back at <your-number-here>.";		
-	myForm.elements['message'].value = cusMsg1;
-	subj1 = "Sales Inquiry: ADHOC-PLAN offering";		
-	myForm.elements['subject'].value = subj1;
-    
-    function scrollStep(timestamp) {
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        const easeInOutProgress = 0.5 - 0.5 * Math.cos(progress * Math.PI);
-        const scrollY = window.scrollY + targetOffset * easeInOutProgress;
-
-        window.scrollTo(0, scrollY);
-
-        if (progress < 1) {
-            requestAnimationFrame(scrollStep);
-        }
-    }
-
-    requestAnimationFrame(scrollStep);
-}
-
-	//function scrollToForm() {
-	//	const myForm = document.getElementById("contact-form");
-	//	myForm.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-	//	cusMsg1 = "Hi, I have some questions around your ADHOC Package offering. Please do call me back at <your-number-here>.";		
-	//	myForm.elements['message'].value = cusMsg1;
-	//	subj1 = "Sales Inquiry: ADHOC-PLAN offering";		
-	//	myForm.elements['subject'].value = subj1;
-	//}
+	function scrollToForm() {
+		const myForm = document.getElementById("contact-form");
+		myForm.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+		cusMsg1 = "Hi, I have some questions around your ADHOC Package offering. Please do call me back at <your-number-here>.";		
+		myForm.elements['message'].value = cusMsg1;
+		subj1 = "Sales Inquiry: ADHOC-PLAN offering";		
+		myForm.elements['subject'].value = subj1;
+	}
 </script>
 
 <script type="text/javascript">
