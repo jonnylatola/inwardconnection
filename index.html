@@ -35,7 +35,7 @@
 <script type="text/javascript">
 	function scrollToForm() {
 		const myForm = document.getElementById("contact-form");
-		myForm.scrollIntoView({behavior: 'slow'});
+		myForm.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 		cusMsg1 = "Hi, I have some questions around your ADHOC Package offering. Please do call me back at <your-number-here>.";		
 		myForm.elements['message'].value = cusMsg1;
 		subj1 = "Sales Inquiry: ADHOC-PLAN offering";		
@@ -46,7 +46,7 @@
 <script type="text/javascript">
 	function scrollToForm2() {
 		const myForm = document.getElementById("contact-form");
-		myForm.scrollIntoView({behavior: 'smooth'});
+		myForm.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 		cusMsg2 = "Hi, I have some questions around your BASIC-PLAN package offering. Please do call me back at <your-number-here>.";		
 		myForm.elements['message'].value = cusMsg2;
 		subj2 = "Sales Inquiry: BASIC-PLAN offering";		
@@ -57,7 +57,7 @@
 <script type="text/javascript">
 	function scrollToForm3() {
 		const myForm = document.getElementById("contact-form");
-		myForm.scrollIntoView({behavior: 'smooth'});
+		myForm.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 		cusMsg3 = "Hi, I have some questions around your ULTRA-PLAN package offering. Please do call me back at <your-number-here>.";		
 		myForm.elements['message'].value = cusMsg3;
 		subj3 = "Sales Inquiry: ULTRA-PLAN offering";		
