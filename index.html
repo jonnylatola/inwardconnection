@@ -11,7 +11,11 @@
 //      var txt = document.getElementById("message");
 	function readmore() {
 		const rm1 = swal("Read More","Did you know...","info");
-		rm1;
+		rm1.then(function() {
+      		// Do something after the pop-up is closed
+      		// For example, you can redirect the user to another page or perform some action
+      		console.log("Pop-up closed!");
+    		});
 	}
 	      
         function sendEmail() { 
