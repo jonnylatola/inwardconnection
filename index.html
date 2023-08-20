@@ -17,6 +17,14 @@
       		console.log("Pop-up closed!");
     		});
 	}
+	function readmore() {
+		const rm2 = swal("Read More","There are several benefits of electronic data capture and filing over maintaining a paper/hardcopy file system: \n1. Accessibility: Electronic data can be accessed from anywhere with an internet connection, making it convenient for remote work or access on the go. Paper/hardcopies, on the other hand, require physical access to the documents.\n2. Storage space: Electronic data takes up minimal physical space compared to the bulk of paper/hardcopies. It eliminates the need for costly filing cabinets and allows for more efficient use of office space.\n3. Efficiency: Electronically captured and filed data can be easily sorted, searched, and indexed, making it quicker and easier to find specific information. In contrast, manually searching through paper documents can be time-consuming and prone to errors.\n4. Security: Electronic data can be password protected, encrypted, and backed up regularly, providing a higher level of security compared to paper documents that can be lost, stolen, or damaged.\n5. Collaboration: Electronic data can be easily shared and collaborated on, allowing multiple users to access and edit documents simultaneously. This promotes better teamwork and facilitates efficient information sharing within an organization.\n6. Cost savings: Going paperless can lead to cost savings in various ways, such as reducing expenses for printing, photocopying, and physical storage. Additionally, electronic data capture and filing systems often have advanced features, such as automated workflows, that can streamline business processes and improve overall productivity.","info");
+		rm2.then(function() {
+      		// Do something after the pop-up is closed
+      		// For example, you can redirect the user to another page or perform some action
+      		console.log("Pop-up closed!");
+    		});
+	}
 	      
         function sendEmail() { 
 		var email = document.getElementById("email").value;
