@@ -24,26 +24,27 @@
         });
     }
 	      
-        function sendEmail() { 
-		var email = document.getElementById("email").value;
-		const message = document.getElementById("message").value;
-	if (email && message)
-          Email.send({ 
-            Host: "smtp.elasticemail.com", 
-            Username: "jonathan@latechops.co.za", 
-            Password: "D33FE948765191E006BEA32B49E4C4E090D1", 
-            To: "jonathan@latechops.co.za", 
-            From: "jonathan@latechops.co.za", 
-            Subject: document.getElementById("subject").value, 
-            Body: "Email: " + email + "<br/>" + message,
-          }) 
-            .then(function (message) { 
-              swal("Thank you!", "Mail successfully sent.", "success") 
-            }); 
-	else {
-		swal("Oops!", "Please fill blanks fields", "warning");
-	}
-        } 
+function sendEmail() {
+    var email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    if (email && message) {
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "jonathan@latechops.co.za",
+            Password: "D33FE948765191E006BEA32B49E4C4E090D1",
+            To: "jonathan@latechops.co.za",
+            From: "jonathan@latechops.co.za",
+            Subject: document.getElementById("subject").value,
+            Body: `Email: ${email}\nMessage: ${message}`, // Use \n for new lines in plain text
+            // If your email service provides an option to specify the content type, you could use:
+            // Headers: { "Content-Type": "text/plain" } // Uncomment if supported
+        }).then(function(response) {
+            swal("Thank you!", "Mail successfully sent.", "success");
+        });
+    } else {
+        swal("Oops!", "Please fill in the blank fields", "warning");
+    }
+}
       </script> 
 
 <script type="text/javascript">
